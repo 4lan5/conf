@@ -11,7 +11,7 @@ set background=dark "背景颜色暗色.(我觉得不错,保护眼睛.)
 
 syntax on "语法高亮显示.(这个肯定是要的.)
 
-set nu!  "显示行号"
+set nu!  "显示行号
 
 set history=50 "设置命令历史记录为50条.
 
