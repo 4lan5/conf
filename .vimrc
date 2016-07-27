@@ -7,13 +7,17 @@ set fencs=ucs-bom,utf-8,cp936,gbk,gb18030,gb2312
 
 set nocompatible "去掉讨厌的有关vim一致性模式,避免以前版本的一些bug和局限.
 
+set number "显示行号
+
+"set list  "显示tab" 
+
+filetype on "检测文件的类型
+
 set background=dark "背景颜色暗色.(我觉得不错,保护眼睛.)
 
 syntax on "语法高亮显示.(这个肯定是要的.)
 
-set nu!  "显示行号
-
-set history=50 "设置命令历史记录为50条.
+set history=1000 "设置命令历史记录为50条.
 
 set autoindent "使用自动对齐，也就是把当前行的对起格式应用到下一行.
 
@@ -27,6 +31,28 @@ set showmatch "设置匹配模式，类似当输入一个左括号时会匹配�
 
 set incsearch "搜索选项.(比如,键入"/bo",光标自动找到一个"bo"所在的位置.)
 
+"set spell "开启英文拼写检查
+
+"解决超长行移动困难
+"重新定义<UP><DOWN>
+:nmap <UP> gk
+:imap <UP> <ESC> gka
+:nmap <DOWN> gj
+:imap <DOWN> <ESC> gja
+
+
+
+
+filetype plugin on
+
+let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
+
 nmap <C-k> : !sdcv <C-R>=expand("<cword>")<CR><CR>
 
 set pastetoggle=<F9>
+
+if has("vms")
+	set nobackup
+else
+	set backup
+endif
