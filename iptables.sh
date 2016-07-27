@@ -1,5 +1,5 @@
 #! /bin/bash
-#default iptables rules for rjgrid
+#default iptables rules for IDC 
 #create by 4lan5 2015-11-20
 
 
