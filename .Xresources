@@ -1,0 +1,95 @@
+! how to use
+! xrdb ~/.Xresources
+
+
+
+! urxvt color set
+URxvt.multichar_encoding:utf-8
+URxvt.background:black
+URxvt.foreground:green
+
+URxvt.depth:32
+
+! black + red
+!urxvt*color0:     #3f3f3f
+ urxvt*color0:      #000000
+ urxvt*color1:      #e01010
+! green + yellow
+ urxvt*color2:      #00AA00
+ urxvt*color3:      #FFFF00
+! blue + purple
+ urxvt*color4:      #112037
+ urxvt*color5:      #A020F0
+! cyan + white
+ urxvt*color6:      #5B5BC7
+ urxvt*color7:      #fefefe
+! bright-black + bright-red
+ urxvt*color8:      #6a6a6a
+ urxvt*color9:      #FF5555
+! bright-green + bright-yellow
+ urxvt*color10:     #90EE90
+ urxvt*color11:     #ffff2f
+! bright-blue + bright-purple
+ urxvt*color12:     #5B5BC7
+ urxvt*color13:     #e628ba
+! bright-cyan + bright-white
+ urxvt*color14:     #7D7DFB
+ urxvt*color15:     #ffffff
+
+
+! scroll set
+URxvt.scrollBar:False
+!URxvt.scrollBar_right:True
+!URxvt.scrollBar_floating:True
+!URxvt.scrollstyle:plain
+!URxvt.scrollWithBuffer:false
+URxvt.saveLines:5000
+
+! font set
+Xft.dpi:96
+Xft.autohint:0
+Xft.lcdfilter:lcddefault
+Xft.hintstyle:hintfull
+Xft.hinting:1
+Xft.antialias:1
+Xft.rgba:rgb
+URxvt.font:xft:DejaVu Sans Mono:antialias=True:pixelsize=14,xft:WenQuanYi Micro Hei Mono:antialias=True:pixelsize=14
+URxvt.boldfont:xft:DejaVu Sans Mono:antialias=True:pixelsize=14,xft:WenQuanYi Micro Hei Mono:antialias=True:pixelsize=14
+
+! font spacing
+URxvt.letterSpace:-1
+URxvt.lineSpace:-1
+
+! cursor
+URxvt.cursorBlink:True
+URxvt.cursorColor:green
+
+! border
+! URxvt.borderColor:green
+
+
+! Input Method set
+URxvt.inputMethod:fcitx
+!URxvt.imLocale:zh_CN.utf8
+!URxvt.imFont:WenQuanYi Zen Hei
+URxvt.preeditType: Root
+
+! window geometry set
+!URxvt.geometry: 90x25+180+200
+URxvt.title:URxvt
+
+! bg transparent set
+URxvt.inheritPixmap: true
+URxvt.tintCddolor: white
+URxvt.shading: 80
+
+! Tab set
+!URxvt.perl-ext-common: default,tabbed
+!URxvt.tabbed.tab-fg: 12
+!URxvt.tabbed.tab-bg: 0
+!URxvt.tabbed.tabbar-fg: 4
+
+Rxvt.menu:/etc/X11/rxvt.menu
+Rxvt.preeditType:Root
+Rxvt.transparency:255
+

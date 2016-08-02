@@ -47,6 +47,15 @@ filetype plugin on
 
 let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
 
+
+"设置markdown高亮插件是否自动折叠
+let g:vim_markdown_folding_disabled = 1
+
+"设置markdown预览
+"let g:instant_markdown_slow = 1
+let g:instant_markdown_autostart = 0
+
+
 nmap <C-k> : !sdcv <C-R>=expand("<cword>")<CR><CR>
 
 set pastetoggle=<F9>
