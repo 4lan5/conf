@@ -81,7 +81,7 @@ URxvt.title:URxvt
 ! bg transparent set
 URxvt.inheritPixmap: true
 URxvt.tintCddolor: white
-URxvt.shading: 80
+URxvt.shading: 10
 
 ! Tab set
 !URxvt.perl-ext-common: default,tabbed
@@ -93,3 +93,5 @@ Rxvt.menu:/etc/X11/rxvt.menu
 Rxvt.preeditType:Root
 Rxvt.transparency:255
 
+
+URxvt.perl-ext-common: default,selection-to-clipboard

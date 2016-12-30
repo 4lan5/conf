@@ -163,9 +163,9 @@ bar {
 
 
 # Pulse Audio controls
-#bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-#bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-#bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindcode 123 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindcode 122 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindcode 121 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 
 # Alsa Audio controls
@@ -173,8 +173,8 @@ bar {
 #bindsym Mod4+period exec amixer set Master -q 5%+
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindcode 233 exec xbacklight -inc 20 # increase screen brightness
+bindcode 232 exec xbacklight -dec 20 # decrease screen brightness
 
 
 # Media player controls
@@ -184,18 +184,18 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 #bindsym XF86AudioPrev exec playerctl previous
 
 # Set Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.png
+exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.jpg
 
 
 # Screenshot
 bindsym --release $mod+z exec --no-startup-id  "scrot -s" 
 
-#start mate
-exec --no-startup-id mate-settings-daemon
+#start gnome-settings
+#exec --no-startup-id gnome-settings-daemon
 
 
 #sound contrl
-exec --no-startup-id mate-volume-control-applet 
+#exec --no-startup-id mate-volume-control-applet 
 
 #screensaver
 exec --no-startup-id "xscreensaver -no-splash &"
@@ -225,12 +225,12 @@ exec --no-startup-id workrave
 #}
 #bindsym $mod+Pause mode "$mode_system"
 
-# disable i3wm titlebar
-new_window pixel 1 
+# i3wm titlebar
+new_window pixel 2 
 
 # class                 border  backgr. text    indicator child_border
-client.focused          #4c7899 #00aa00 #ffffff #2e9ef4   #285577
-client.focused_inactive #333333 #5f676a #ffffff #484e50   #5f676a
+client.focused          #00aa00 #00aa00 #ffffff #00aa00   #00aa00
+client.focused_inactive #00aa00 #00aa00 #ffffff #484e50   #5f676a
 client.unfocused        #333333 #222222 #888888 #292d2e   #222222
 client.urgent           #2f343a #900000 #ffffff #900000   #900000
 client.placeholder      #000000 #0c0c0c #ffffff #000000   #0c0c0c
