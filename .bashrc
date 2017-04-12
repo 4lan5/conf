@@ -90,7 +90,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lla='ls -la'
 alias rm='rm -i'
-alias cdgit='cd ~/Desktop/rj/git/'
+alias cdsvn='cd ~/Desktop/SOOC/运维部/'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
