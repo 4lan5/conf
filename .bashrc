@@ -91,6 +91,7 @@ alias l='ls -CF'
 alias lla='ls -la'
 alias rm='rm -i'
 alias cdsvn='cd ~/Desktop/SOOC/运维部/'
+alias lyk='cssh lyk-web0 lyk-web1'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
