@@ -94,6 +94,7 @@ alias p='proxychains'
 alias rm='trash'
 alias cdsvn='cd ~/Desktop/SOOC/运维部/'
 alias lyk='cssh lyk-web0 lyk-web1'
+alias sshtest='cssh test-web0 test-web1'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.
@@ -114,6 +115,8 @@ if ! shopt -oq posix; then
   fi
 fi
 
+
+complete -cf p
 
 export PATH=$PATH:/sbin:/usr/bin/:/usr/sbin/:/usr/local/bin
 
