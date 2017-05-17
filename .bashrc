@@ -92,8 +92,11 @@ alias lla='ls -la'
 alias p='proxychains'
 #alias rm='rm -i'
 alias rm='trash'
+alias sooc='cd ~/Desktop/SOOC/'
 alias cdsvn='cd ~/Desktop/SOOC/运维部/'
 alias lyk='cssh lyk-web0 lyk-web1'
+alias schn='cssh schn-web0 schn-web1'
+alias zwds='cssh zwds-web0 zwds-web1 zwds-web2'
 alias sshtest='cssh test-web0 test-web1'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
