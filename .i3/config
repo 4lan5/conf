@@ -164,19 +164,22 @@ bar {
 
 
 # Pulse Audio controls
-bindcode 123 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
-bindcode 122 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
-bindcode 121 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
-
+#bindcode 123 exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+#bindcode 122 exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+#bindcode 121 exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
+bindsym XF86AudioRaiseVolume exec --no-startup-id pactl set-sink-volume 0 +5% #increase sound volume
+bindsym XF86AudioLowerVolume exec --no-startup-id pactl set-sink-volume 0 -5% #decrease sound volume
+bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute sound
 
 # Alsa Audio controls
-#bindsym Mod4+comma exec amixer set Master -q 5%-
-#bindsym Mod4+period exec amixer set Master -q 5%+
+bindsym Mod4+comma exec amixer set Master -q 5%-
+bindsym Mod4+period exec amixer set Master -q 5%+
 
 # Sreen brightness controls
-bindcode 233 exec xbacklight -inc 20 # increase screen brightness
-bindcode 232 exec xbacklight -dec 20 # decrease screen brightness
-
+#bindcode 233 exec xbacklight -inc 20 # increase screen brightness
+#bindcode 232 exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
+bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
 # Media player controls
 #bindsym XF86AudioPlay exec playerctl play
