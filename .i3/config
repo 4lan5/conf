@@ -261,3 +261,9 @@ mode "$mode_display" {
 }
 # Declare here the shortcut to bring the display selection menu
 bindsym $mod+x mode "$mode_display"
+
+
+
+#For QQ
+for_window [instance="QQ.exe"] floating enable
+for_window [instance="QQ.exe"] border none
