@@ -125,3 +125,7 @@ export PATH=$PATH:/sbin:/usr/bin/:/usr/sbin/:/usr/local/bin
 
 #export HISTTIMEFORMAT='%F %T '  
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S  `whoami`  " # 这将显示执行命令的用户  
+
+#解决java字体不清晰
+export _JAVA_OPTIONS='-Dawt.useSystemAAFontSettings=lcd'
+
