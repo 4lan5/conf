@@ -43,7 +43,7 @@ URxvt.scrollBar:False
 !URxvt.scrollBar_floating:True
 !URxvt.scrollstyle:plain
 !URxvt.scrollWithBuffer:false
-URxvt.saveLines:5000
+URxvt.saveLines:500000
 
 ! font set
 Xft.dpi:96
