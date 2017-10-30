@@ -9,7 +9,7 @@ set nocompatible "去掉讨厌的有关vim一致性模式,避免以前版本的�
 
 set number "显示行号
 
-"set list  "显示tab" 
+set list  "显示tab" 
 
 filetype on "检测文件的类型
 
@@ -65,3 +65,7 @@ if has("vms")
 else
 	set backup
 endif
+
+"记住打开位置
+au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
+
