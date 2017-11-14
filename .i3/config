@@ -212,6 +212,8 @@ exec --no-startup-id nm-applet
 # workwave
 exec --no-startup-id workrave
 
+# dropbox
+exec --no-startup-id "~/.dropbox-dist/dropboxd &"
 
 # lock logout suspend ...
 #set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
@@ -264,6 +266,3 @@ bindsym $mod+x mode "$mode_display"
 
 
 
-#For QQ
-for_window [instance="VBoxHeadless"] floating enable
-for_window [instance="VBoxHeadless"] border none
