@@ -195,7 +195,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.jpg
 bindsym --release $mod+z exec --no-startup-id  "scrot -s" 
 
 #start gnome-settings
-#exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id gnome-settings-daemon
 
 
 #sound contrl
