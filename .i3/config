@@ -176,10 +176,8 @@ bindsym Mod4+comma exec amixer set Master -q 5%-
 bindsym Mod4+period exec amixer set Master -q 5%+
 
 # Sreen brightness controls
-#bindcode 233 exec xbacklight -inc 20 # increase screen brightness
-#bindcode 232 exec xbacklight -dec 20 # decrease screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightness+ # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightness- # decrease screen brightness
 
 # Media player controls
 #bindsym XF86AudioPlay exec playerctl play
@@ -192,7 +190,7 @@ exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.jpg
 
 
 # Enable touchpad click
-exec xinput set-prop 11 276 1
+exec xinput set-prop 11 278 1
 
 # Screenshot
 bindsym --release $mod+z exec --no-startup-id  "scrot -s" 
