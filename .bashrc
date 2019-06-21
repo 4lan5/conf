@@ -90,7 +90,7 @@ alias la='ls -A'
 alias l='ls -CF'
 alias lla='ls -la'
 alias p='proxychains'
-alias py333='python3'
+alias py3='python3'
 #alias rm='rm -i'
 alias rm='trash'
 # Alias definitions.
