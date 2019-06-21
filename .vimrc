@@ -1,3 +1,6 @@
+"turn on pathogen
+execute pathogen#infect()
+
 set fileformats=unix,dos,mac " support all three, in this order
 
 set enc=utf-8       " Sets the character encoding used inside Vim.
@@ -35,18 +38,15 @@ set incsearch "搜索选项.(比如,键入"/bo",光标自动找到一个"bo"所�
 
 "解决超长行移动困难
 "重新定义<UP><DOWN>
-:nmap <UP> gk
-:imap <UP> <ESC> gka
-:nmap <DOWN> gj
-:imap <DOWN> <ESC> gja
-
+":nmap <UP> gk
+":imap <UP> <ESC> gka
+":nmap <DOWN> gj
+":imap <DOWN> <ESC> gja
+":nmap <C-k> : !sdcv <C-R>=expand("<cword>")<CR><CR>
 
 
 
 filetype plugin on
-
-let g:pydiction_location = '~/.vim/tools/pydiction/complete-dict'
-
 
 "设置markdown高亮插件是否自动折叠
 let g:vim_markdown_folding_disabled = 1
@@ -55,9 +55,13 @@ let g:vim_markdown_folding_disabled = 1
 "let g:instant_markdown_slow = 1
 let g:instant_markdown_autostart = 0
 
+"设置jedi触发键
+let g:jedi#completions_command = "<C-N>"
 
-nmap <C-k> : !sdcv <C-R>=expand("<cword>")<CR><CR>
+"设置pydiction
+let g:pydiction_location = '~/.vim/bundle/pydiction/complete-dict'
 
+"设置粘贴模式触发
 set pastetoggle=<F9>
 
 if has("vms")
@@ -69,3 +73,39 @@ endif
 "记住打开位置
 au BufReadPost * if line("'\"") > 0|if line("'\"") <= line("$")|exe("norm '\"")|else|exe "norm $"|endif|endif
 
+
+
+autocmd BufNewFile *.sh,*.py exec ":call SetTitle()"
+"定义函数SetTitle，自动插入文件头
+let $author_name = "alans"
+let $author_email = "root@4lan5.me"
+
+func SetTitle()
+        "如果文件类型为.sh文件
+        if &filetype == 'sh'
+                call setline(1, "\#!/bin/bash")
+                call setline(2, "\# Author:" .$author_name)
+                call setline(3, "\# mail:" .$author_email)
+                call setline(4, "\# Created : ".strftime("%Y-%m-%d %H:%M:%S"))
+                call setline(5, "\# Last Modified : ".strftime("%Y-%m-%d %H:%M:%S"))
+                call setline(6, "\# File Name: ".expand("%"))
+                call setline(7, "\# Description:")
+                call setline(8,"")
+        endif
+        "如果文件类型为.py文件
+        if &filetype == 'python'
+                call setline(1, "\#!/usr/bin/env python")
+                call setline(2, "\# -*- coding=utf8 -*-")
+                call setline(3, "\"\"\"")
+                call setline(4, "\# Author:" .$author_name)
+                call setline(5, "\# mail:" .$author_email)
+                call setline(6, "\# Created : ".strftime("%Y-%m-%d %H:%M:%S"))
+                call setline(7, "\# Last Modified : ".strftime("%Y-%m-%d %H:%M:%S"))
+                call setline(8, "\# File Name: ".expand("%"))
+                call setline(9, "\# Description:")
+                call setline(10, "\"\"\"")
+                call setline(11,"")
+        endif
+endfunc
+" 自动将光标移动到文件末尾
+autocmd BufNewfile * normal G

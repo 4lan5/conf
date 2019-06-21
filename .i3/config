@@ -156,7 +156,7 @@ bindsym $mod+r mode "resize"
 bar {
 #        status_command i3status | ~/conf/mystatus.sh
         status_command i3blocks
-		position        top
+        position        top
 }
 
 
@@ -176,10 +176,8 @@ bindsym Mod4+comma exec amixer set Master -q 5%-
 bindsym Mod4+period exec amixer set Master -q 5%+
 
 # Sreen brightness controls
-#bindcode 233 exec xbacklight -inc 20 # increase screen brightness
-#bindcode 232 exec xbacklight -dec 20 # decrease screen brightness
-bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
-bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
+bindsym XF86MonBrightnessUp exec brightness+ # increase screen brightness
+bindsym XF86MonBrightnessDown exec brightness- # decrease screen brightness
 
 # Media player controls
 #bindsym XF86AudioPlay exec playerctl play
@@ -188,14 +186,17 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightne
 #bindsym XF86AudioPrev exec playerctl previous
 
 # Set Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/NZ.jpg
 
+
+# Enable touchpad click
+exec xinput set-prop 11 278 1
 
 # Screenshot
 bindsym --release $mod+z exec --no-startup-id  "scrot -s" 
 
 #start gnome-settings
-#exec --no-startup-id gnome-settings-daemon
+exec --no-startup-id gnome-settings-daemon
 
 
 #sound contrl
@@ -212,22 +213,27 @@ exec --no-startup-id nm-applet
 # workwave
 exec --no-startup-id workrave
 
+# dropbox
+exec --no-startup-id "~/.dropbox-dist/dropboxd &"
+
+# fcitx
+exec --no-startup-id "fcitx &"
 
 # lock logout suspend ...
-#set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
-#mode "$mode_system" {
-#    bindsym l exec --no-startup-id i3exit lock, mode "default"
-#    bindsym e exec --no-startup-id i3exit logout, mode "default"
-#    bindsym s exec --no-startup-id i3exit suspend, mode "default"
-#    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
-#    bindsym r exec --no-startup-id i3exit reboot, mode "default"
-#    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
+set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
+mode "$mode_system" {
+    bindsym l exec --no-startup-id i3exit lock, mode "default"
+    bindsym e exec --no-startup-id i3exit logout, mode "default"
+    bindsym s exec --no-startup-id i3exit suspend, mode "default"
+    bindsym h exec --no-startup-id i3exit hibernate, mode "default"
+    bindsym r exec --no-startup-id i3exit reboot, mode "default"
+    bindsym Shift+s exec --no-startup-id i3exit shutdown, mode "default"  
 
-    # back to normal: Enter or Escape
-#    bindsym Return mode "default"
-#    bindsym Escape mode "default"
-#}
-#bindsym $mod+Pause mode "$mode_system"
+#back to normal: Enter or Escape
+    bindsym Return mode "default"
+    bindsym Escape mode "default"
+}
+bindsym $mod+Pause mode "$mode_system"
 
 # i3wm titlebar
 new_window pixel 2 
@@ -248,12 +254,12 @@ client.background       #ffffff
 # Set the shortcuts and what they do
 set $mode_display Ext Screen (v) VGA ON, (h) HDMI ON, (x) VGA OFF, (y) HDMI OFF
 mode "$mode_display" {
-    #bindsym v exec --no-startup-id xrandr --output VGA1 --auto --right-of LVDS1, mode "default"
-    #bindsym h exec --no-startup-id xrandr --output HDMI1 --auto --right-of LVDS1, mode "default"
-    bindsym v exec --no-startup-id xrandr --output VGA1 --mode 1920x1080 --right-of LVDS1, mode "default"
-    bindsym h exec --no-startup-id xrandr --output HDMI1 --mode 1920x1080  --right-of LVDS1, mode "default"
-    bindsym x exec --no-startup-id xrandr --output VGA1 --auto --off, mode "default"
-    bindsym y exec --no-startup-id xrandr --output HDMI1 --auto --off, mode "default"
+    #bindsym v exec --no-startup-id xrandr --output VGA-1 --auto --right-of LVDS-1, mode "default"
+    #bindsym h exec --no-startup-id xrandr --output HDMI-1 --auto --right-of LVDS-1, mode "default"
+    bindsym v exec --no-startup-id xrandr --output VGA-1 --mode 1920x1080 --right-of LVDS-1, mode "default"
+    bindsym h exec --no-startup-id xrandr --output HDMI-1 --mode 1920x1080  --right-of LVDS-1, mode "default"
+    bindsym x exec --no-startup-id xrandr --output VGA-1 --auto --off, mode "default"
+    bindsym y exec --no-startup-id xrandr --output HDMI-1 --auto --off, mode "default"
 
     # back to normal: Enter or Escape
     bindsym Return mode "default"
@@ -264,6 +270,3 @@ bindsym $mod+x mode "$mode_display"
 
 
 
-#For QQ
-for_window [instance="QQ.exe"] floating enable
-for_window [instance="QQ.exe"] border none
