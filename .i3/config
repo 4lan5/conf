@@ -186,7 +186,7 @@ bindsym XF86MonBrightnessDown exec brightness- # decrease screen brightness
 #bindsym XF86AudioPrev exec playerctl previous
 
 # Set Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/NZ.jpg
 
 
 # Enable touchpad click
