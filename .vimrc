@@ -109,3 +109,15 @@ func SetTitle()
 endfunc
 " 自动将光标移动到文件末尾
 autocmd BufNewfile * normal G
+
+"SET Last Modified Time START
+func DataInsert()
+    call cursor(9,1)
+    if search ('Last Modified') != 0
+        let line = line('.')
+        call setline(line, '# Last Modified: '.strftime("%Y-%m-%d %H:%M:%S"))
+    endif
+endfunc
+
+autocmd FileWritePre,BufWritePre *.sh,*.py ks|call DataInsert() |'s
+"SET Last Modified Time END
