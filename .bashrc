@@ -91,8 +91,9 @@ alias l='ls -CF'
 alias lla='ls -la'
 alias p='proxychains'
 alias py3='python3'
-#alias rm='rm -i'
-alias rm='trash'
+alias aria2='aria2c  -c .config/aria2/aria2.conf -D'
+alias rm='rm -i'
+#alias rm='trash'
 # Alias definitions.
 # You may want to put all your additions into a separate file like
 # ~/.bash_aliases, instead of adding them here directly.

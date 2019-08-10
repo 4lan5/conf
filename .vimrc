@@ -53,7 +53,7 @@ let g:vim_markdown_folding_disabled = 1
 
 "设置markdown预览
 "let g:instant_markdown_slow = 1
-let g:instant_markdown_autostart = 0
+let g:instant_markdown_autostart = 1
 
 "设置jedi触发键
 let g:jedi#completions_command = "<C-N>"
