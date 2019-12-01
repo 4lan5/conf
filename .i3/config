@@ -176,8 +176,8 @@ bindsym Mod4+comma exec amixer set Master -q 5%-
 bindsym Mod4+period exec amixer set Master -q 5%+
 
 # Sreen brightness controls
-bindsym XF86MonBrightnessUp exec brightness+ # increase screen brightness
-bindsym XF86MonBrightnessDown exec brightness- # decrease screen brightness
+#bindsym XF86MonBrightnessUp exec brightness+ # increase screen brightness
+#bindsym XF86MonBrightnessDown exec brightness- # decrease screen brightness
 
 # Media player controls
 #bindsym XF86AudioPlay exec playerctl play
@@ -186,26 +186,27 @@ bindsym XF86MonBrightnessDown exec brightness- # decrease screen brightness
 #bindsym XF86AudioPrev exec playerctl previous
 
 # Set Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/NZ.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.jpg
 
 
 # Enable touchpad click
-exec xinput set-prop 11 278 1
+#exec xinput set-prop 11 278 1
 
 # Screenshot
 bindsym --release $mod+z exec --no-startup-id  "scrot -s" 
 
 #start gnome-settings
-exec --no-startup-id gnome-settings-daemon
+#exec --no-startup-id gnome-settings-daemon
 
+# power manager
+exec --no-startup-id "xfce4-power-manager"
 
 #sound contrl
 #exec --no-startup-id mate-volume-control-applet 
 
 #screensaver
 exec --no-startup-id "xscreensaver -no-splash &"
-bindsym $mod+Shift+o exec "xscreensaver-command --lock"
-
+bindsym $mod+shift+o exec "xscreensaver-command --lock"
 
 # network manager
 exec --no-startup-id nm-applet

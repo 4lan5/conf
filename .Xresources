@@ -53,8 +53,8 @@ Xft.hintstyle:hintfull
 Xft.hinting:1
 Xft.antialias:1
 Xft.rgba:rgb
-URxvt.font:xft:DejaVu Sans Mono:antialias=True:pixelsize=14,xft:WenQuanYi Micro Hei Mono:antialias=True:pixelsize=14
-URxvt.boldfont:xft:DejaVu Sans Mono:antialias=True:pixelsize=14,xft:WenQuanYi Micro Hei Mono:antialias=True:pixelsize=14
+URxvt.font:xft:DejaVu Sans Mono:antialias=True:pixelsize=14,xft:WenQuanYi Zei Hei Mono:antialias=True:pixelsize=14
+URxvt.boldfont:xft:DejaVu Sans Mono:antialias=True:pixelsize=14,xft:WenQuanYi Zei Hei Mono:antialias=True:pixelsize=14
 
 ! font spacing
 URxvt.letterSpace:-1
