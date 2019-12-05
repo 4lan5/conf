@@ -47,14 +47,14 @@ URxvt.saveLines:500000
 
 ! font set
 Xft.dpi:96
-Xft.autohint:0
+Xft.autohint:1
 Xft.lcdfilter:lcddefault
 Xft.hintstyle:hintfull
 Xft.hinting:1
 Xft.antialias:1
 Xft.rgba:rgb
-URxvt.font:xft:DejaVu Sans Mono:antialias=True:pixelsize=14,xft:WenQuanYi Zei Hei Mono:antialias=True:pixelsize=14
-URxvt.boldfont:xft:DejaVu Sans Mono:antialias=True:pixelsize=14,xft:WenQuanYi Zei Hei Mono:antialias=True:pixelsize=14
+URxvt.font:xft:DejaVu Sans Mono:antialias=True:pixelsize=16,xft:Wenquanyi Zenhei Mono:antialias=True:pixelsize=16
+URxvt.boldfont:xft:DejaVu Sans Mono:antialias=True:pixelsize=16,xft:Wenquanyi Zenhei Mono:antialias=True:pixelsize=16
 
 ! font spacing
 URxvt.letterSpace:-1

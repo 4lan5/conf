@@ -27,7 +27,7 @@ font pango:DejaVu Sans Mono 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec urxvt 
+bindsym $mod+Return exec xfce4-terminal 
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -184,6 +184,9 @@ bindsym Mod4+period exec amixer set Master -q 5%+
 #bindsym XF86AudioPause exec playerctl pause
 #bindsym XF86AudioNext exec playerctl next
 #bindsym XF86AudioPrev exec playerctl previous
+
+# add xfce4-terminal transparency support
+exec --no-startup-id compton
 
 # Set Wallpaper
 exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.jpg
