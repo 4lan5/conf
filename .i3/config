@@ -189,7 +189,7 @@ bindsym Mod4+period exec amixer set Master -q 5%+
 exec --no-startup-id compton
 
 # Set Wallpaper
-exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/SZE.jpg
+exec --no-startup-id feh --bg-scale ~/Pictures/WALLPAPER/FREE.jpg
 
 
 # Enable touchpad click
@@ -220,6 +220,8 @@ exec --no-startup-id workrave
 # dropbox
 exec --no-startup-id "~/.dropbox-dist/dropboxd &"
 
+# syncthing
+exex --no-startup-id "syncthing &"
 # fcitx
 exec --no-startup-id "fcitx &"
 
