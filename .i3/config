@@ -221,7 +221,7 @@ exec --no-startup-id workrave
 exec --no-startup-id "~/.dropbox-dist/dropboxd &"
 
 # syncthing
-exex --no-startup-id "syncthing &"
+exec --no-startup-id "syncthing &"
 # fcitx
 exec --no-startup-id "fcitx &"
 
