@@ -117,7 +117,7 @@ fi
 
 complete -cf p
 
-export PATH=$PATH:/sbin:/usr/bin/:/usr/sbin/:/usr/local/bin
+export PATH=$PATH:/sbin:/usr/bin/:/usr/sbin/:/usr/local/bin:~/.local/bin
 
 #export HISTTIMEFORMAT='%F %T '  
 export HISTTIMEFORMAT="%Y-%m-%d %H:%M:%S  `whoami`  " # 这将显示执行命令的用户  
