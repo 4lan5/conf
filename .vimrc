@@ -5,7 +5,7 @@ set fileformats=unix,dos,mac " support all three, in this order
 
 set enc=utf-8       " Sets the character encoding used inside Vim.
 set fenc=utf-8      " Sets the character encoding for the file.
-set fencs=ucs-bom,utf-8,cp936,gbk,gb18030,gb2312
+set fencs=ucs-bom,utf-8,cp936,gbk,gb18030,gb2312,big5,iso-2022-jp,euc-jp,sjis
 
 
 set nocompatible "去掉讨厌的有关vim一致性模式,避免以前版本的一些bug和局限.
