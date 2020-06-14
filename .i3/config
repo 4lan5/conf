@@ -223,7 +223,7 @@ exec --no-startup-id "~/.dropbox-dist/dropboxd &"
 # syncthing
 exec --no-startup-id "syncthing &"
 # fcitx
-exec --no-startup-id "fcitx &"
+exec --no-startup-id "fcitx5 &"
 
 # lock logout suspend ...
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
